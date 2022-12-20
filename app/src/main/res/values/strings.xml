@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Weather Report</string>
+    <string name="button_title">Click! Here To Get Report</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_str">Welcome to weather report App</string>
+    <string name="date_str">On %s at </string>
+    <string name="time_str">  %s</string>
+    <string name="temperature_str">Temperature : %s \u2103 </string>
+    <string name="humidity">Humidity : %s </string>
+    <string name="weather_desc">Weather Description :  %s  </string>
+    <string name="wind_str">Wind Speed :  %s  </string>
+    <string name="placeTitle"> %s Weather Report  </string>
+    <string name="error_Message">No Data Found  </string>
+    <string name="network_error">Please check your network and try again.</string>
+</resources>

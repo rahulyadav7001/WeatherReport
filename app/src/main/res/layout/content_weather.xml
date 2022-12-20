@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.WeatherReportActivity"
+    tools:showIn="@layout/activity_weather_report">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/title_str"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_loadReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/button_title"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_700"
+        android:textSize="15dp"
+        android:layout_margin="@dimen/text_margin"
+        app:layout_constraintEnd_toEndOf="@+id/btn_loadReport"
+        app:layout_constraintStart_toStartOf="@+id/btn_loadReport"
+        app:layout_constraintTop_toBottomOf="@+id/btn_loadReport"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/pb_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_weatherReport"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:paddingBottom="@dimen/layout_padding"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="@+id/tv_place"
+        app:layout_constraintStart_toEndOf="@+id/tv_place"
+        app:layout_constraintStart_toStartOf="@+id/tv_place"
+        app:layout_constraintTop_toBottomOf="@+id/tv_place" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
